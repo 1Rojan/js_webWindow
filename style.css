@@ -1,10 +1,15 @@
 body {
     padding: 0;
     margin: 0;
+    background: linear-gradient(to right, #7bd4f5 , #2866bb);
+}
+.hidden{
+    display: none;
 }
 
 .desktop {
     position: relative;
+    
 }
 
 .menu {
@@ -16,11 +21,19 @@ body {
     border: 2px solid black;
     padding: 0;
 }
+.fas,.far{
+    color: white;
+}
 
 li {
     padding: 3px;
     outline: 1px solid;
-    background: white;
+    background: white;   
+    border:1px solid black;
+}
+i{
+    margin-right: 5px;
+    
 }
 
 li:hover {
@@ -29,22 +42,23 @@ li:hover {
 
 input {
     display: none;
+    
 }
-
-
 .mywindow{
-    height: 50%;
-    width: 50%; 
-    border: 2px solid green;
+    background:linear-gradient(to right, #7bd4f5 , #2866bb);
+    border:1px solid #17365a; 
     position: absolute;
     top: 2px;
+    height: 80%;
+    width: 500px;
+    padding: 0 8px 8px 8px;
+    border-radius: 3px 3px 3px 3px;
     /* overflow: hidden;    */
 }
 .title-bar{
-    background: blue;
-    overflow: auto;
-    height: 8%;
-   
+    background:linear-gradient(to right, #7bd4f5 , #2866bb);
+    overflow: hidden ;
+    height:27px;  
 }
 .title{
     float:left;
@@ -54,24 +68,27 @@ input {
     
 }
 .content{
-    height: 94%;
-    padding: 5px;
+    height: 93%;
     box-sizing: border-box;
     background: white;
-
+    border-radius: 1px 1px 1px 1px;
+    border: 1px solid black;
+  
 }
 .minimize{
-    height: 5%;
-    width: auto;
-    top:90%;
-    left: 10px;
+   height: 24px !important;
+    width: 250px !important;
+    top:90% !important;
+    left: 10% !important;
+    overflow: hidden !important;
+    padding:  0!important;
 }
 .maximize{
-    position: absolute;
-    height: 100%;
-    width:100%;
-    top: 0;
-    left: 0px;
+   
+    height: 100% !important;
+    width:100% !important;
+    top: 0 !important;
+    left: 0px !important;
 }
 .restore{
     height: 500px;
@@ -85,12 +102,17 @@ input {
 
 #newWindow{
     position: absolute;
-    top:90%;
+    top:5%;
     left:80%;
-    background: yellow;
+    background: skyblue;
     text-decoration: none;
+    height: 30px;
+    border-radius: 5px 5px 5px 5px;
+    border: 1px solid;
     }
     
     #newWindow:hover{
         color:black;
     }
+
+    
