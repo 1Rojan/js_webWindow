@@ -1,7 +1,7 @@
 //Desktop object
 // var menu;
 desktop = {
-    background: "linear-gradient(to right, #7bd4f5 , #2866bb)",
+    background: "#5eade1",
     height: '100%',
     width: "auto",
     bgSize: "cover",
