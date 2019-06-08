@@ -49,7 +49,7 @@ var myWindow = function () {
         state: 'normal'
     }
 
-    
+ 
     this.restore = function () {
         this.Clonewindow.classList.remove('minimize');
         this.Clonewindow.classList.remove('maximize');
@@ -107,7 +107,7 @@ var myWindow = function () {
         this.Clonewindow.style.width = this.model.width;
         this.Clonewindow.style.left = this.model.left;
         this.Clonewindow.style.zIndex = this.model['z-index'];
-        this.Clonewindow.id = "random" + this.model.id;
+        this.Clonewindow.id = "random" + this.model.id; 
         this.Clonewindow.classList.remove('hidden');
         var desktop = document.querySelector('.desktop');
         this.Clonewindow.querySelector('.fa-times').addEventListener('click', function (e) {
@@ -149,10 +149,9 @@ var myWindow = function () {
                 return null;
             };
         }
-
-        desktop.append(this.Clonewindow);
+        desktop.append(this.Clonewindow); 
         
-        console.log(thisWindow);
     }
 }
+
 

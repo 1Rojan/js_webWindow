@@ -12,7 +12,6 @@ desktop = {
             menu.style.display = 'block';
             menu.style.top = (event.pageY) + 'px';
             menu.style.left = (event.pageX) + 'px';
-
         },
         hide: function () {
             var menu = document.querySelector('.menu');
@@ -30,7 +29,6 @@ desktop = {
                 reader.onload = function () {
                     desktop.background = "url(" + reader.result + ")";
                     desktop.render();
-
                 }
             }
         }
@@ -55,6 +53,8 @@ desktop = {
             if (!lastWindow) {
                 lastWindow = newWindow
             }
+
+            newWindow.model.id = lastWindow.model.id + 1;
             newWindow.model.top = parseInt(lastWindow.model.top) + 12 + 'px';
             newWindow.model.left = parseInt(lastWindow.model.left) + 12 + 'px';
             newWindow.model['z-index'] = lastWindow.model['z-index'] + 1;
@@ -75,7 +75,6 @@ desktop = {
         localStorage.setItem('desktop', JSON.stringify(model));
     }
 }
-
 
 var collection = {
     objects: [],
@@ -99,5 +98,6 @@ desktopBootLoader = function () {
         desktop.backgorundSize = actualData.backgorundSize;
     }
 }
-
 desktopBootLoader(); 
+setInterval(collection.save(), 2000);
+// windowsBootloader();
